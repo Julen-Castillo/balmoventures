@@ -142,7 +142,7 @@ canvas {
     height: 100%;
     background-color: var(--mainCanvasBackground);
     z-index: 2;
-    animation: loaderFinished 3s 3s forwards;
+    animation: loaderFinished 1s 3s forwards;
 }
 
 .loader__text {
@@ -314,6 +314,9 @@ canvas {
 
 
 /** POPUP SUBSECTIONS START**/
+
+
+/** Slider**/
 
 
 /* WHAT WE OFFER */
@@ -597,6 +600,7 @@ iframe {
 
 .content-section.section--hidden .content-section__title,
 .content-section.section--hidden .content-section__text,
+.content-section.section--hidden-reverse .content-section__text2,
 .content-section.section--hidden .content-section__button,
 .content-section.section--hidden .content-section__image-holder,
 .content-section.section--hidden .content-section__buttons-holder,
@@ -607,6 +611,7 @@ iframe {
 
 .content-section.section--hidden-reverse .content-section__title,
 .content-section.section--hidden-reverse .content-section__text,
+.content-section.section--hidden-reverse .content-section__text2,
 .content-section.section--hidden-reverse .content-section__button,
 .content-section.section--hidden-reverse .content-section__image-holder,
 .content-section.section--hidden-reverse .content-section__buttons-holder,
@@ -663,6 +668,16 @@ iframe {
     transition: var(--contentTransitionDuration) 500ms var(--contentTransitionBezier);
 }
 
+.content-section__text2 {
+    width: 100%;
+    color: var(--secondaryColor);
+    text-align: center;
+    font: 600 20px Roboto, sans-serif;
+    margin-bottom: 50px;
+    transform: translate3d(0, 0, 0);
+    transition: var(--contentTransitionDuration) 500ms var(--contentTransitionBezier);
+}
+
 .content-section__buttons-holder {
     display: flex;
     transform: translate3d(0, 0, 0);
@@ -704,6 +719,8 @@ iframe {
 
 .content-services {
     display: flex;
+    flex-direction: column;
+    width: 80%;
     margin-bottom: 40px;
 }
 
@@ -848,7 +865,7 @@ iframe {
 /* Content portfolio section */
 
 .content-portfolio__images {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .content-portfolio__image-holder {
@@ -970,6 +987,9 @@ iframe {
     .fixed-content-header__logo {
         font-size: var(--primaryTextSize);
         letter-spacing: var(--letterSpacing);
+    }
+    .fixed-content-header__sublogo {
+        font-size: var(--primaryTextSizeS);
     }
     .menu-list__item {
         font-size: 30px;
