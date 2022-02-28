@@ -18,10 +18,11 @@
 }
 .button__text {
   z-index: 1;
+  
 }
 
 .button--primary {
-  background-color: var(--primaryColor);
+  background: var(--primaryGradientColor);
   color: var(--secondaryColor);
   position: relative;
   z-index: 1;
@@ -49,7 +50,7 @@
 }
 
 .button--icon {
-  background-color: var(--primaryColor);
+  background: var(--primaryGradientColor);
   color: var(--secondaryColor);
   display: flex;
   align-items: center;
@@ -83,7 +84,7 @@
 .button--secondary {
   display: flex;
   align-items: center;
-  border: 2px solid var(--primaryColor);
+  border: 2px solid #43d1dd;
   color: var(--secondaryColor);
 }
 .button--secondary::before {

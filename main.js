@@ -7,8 +7,8 @@ const configuration = {
         NumberOfDots: 5000,
         colors: {
             CanvasBackgroundColor: '#141414',
-            LettersColor: '#006ccb',
-            LinesColors: ['#FFF', '#006ccb', '#7d7d7d'],
+            LettersColor: '#43d1dd',
+            LinesColors: ['#FFF', '#43d1dd', '#7d7d7d'],
             LowerLinesColors: ['#3d3d3d'],
             DotsColor: '#7d7d7d'
         }
@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         init()
         animate()
-    }, 3000)
+    }, 2500)
 })
 
 function init() {

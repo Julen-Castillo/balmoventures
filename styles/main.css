@@ -36,11 +36,12 @@
 
 :root {
     --primaryColor: #0088ff;
-    --primaryBoldColor: #006ccb;
-    --primaryBlackColor: #00437d;
+    --primaryBoldColor: #4f94e6;
+    --primaryBlackColor: #050505;
     --secondaryColor: #ffffff;
     --opaqueBackground: #000000e6;
     --mainCanvasBackground: #141414;
+    --primaryGradientColor: linear-gradient(180deg, #43d1dd 0%, #4f94e6 100%);
     --primaryTextSize: 15px;
     --primaryTextSizeS: 10px;
     --letterSpacing: 5px;
@@ -390,15 +391,26 @@ iframe {
     letter-spacing: 5px;
     user-select: none;
     margin-left: 30px;
+   
 }
+
 
 .fixed-content-header__logo::first-letter {
     color: var(--primaryColor);
 }
 
+
 .fixed-content-header__sublogo::first-letter {
-    color: var(--primaryColor);
+    
+
+  
 }
+.xd{
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background: var(--primaryGradientColor);
+}
+
 
 .fixed-content-paging {
     position: fixed;
@@ -834,6 +846,7 @@ iframe {
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
 }
 
+
 .content-section__image-holder:nth-of-type(1) {
     transform: translate(0, -50%);
     transition: 400ms 100ms var(--contentTransitionBezier);
@@ -876,8 +889,17 @@ iframe {
     display: flex;
     justify-content: center;
     transform: translate3d(0, 0, 0) rotate(45deg);
-    transition: 1500ms 800ms ease-in-out;
+    transition: 600ms 0ms ease-in-out;
     position: relative;
+}
+
+.content-portfolio__image-holder:hover{
+    transform: translate3d(0, 0, 0) rotate(0deg);
+}
+
+.content-portfolio__image-holder:hover:before{
+    transition: 600ms 0ms ease-in-out;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.741) 0%, rgba(63, 4, 4, 0) 100%);
 }
 
 .content-portfolio__image-holder:last-of-type {
@@ -888,7 +910,17 @@ iframe {
     height: 100%;
     transform: rotate(-45deg);
     object-fit: cover;
-    transition: 1500ms 800ms ease-in-out;
+    transition: 600ms 0ms ease-in-out;
+}
+
+.content-portfolio__image-holder:hover .content-portfolio__image{
+    transform: rotate(0deg);
+}
+
+
+.content-portfolio__image-holder:hover .content-portfolio__name{
+     transform: rotate(0deg);
+     left: 0px;
 }
 
 .content-portfolio__image-holder:nth-of-type(1),
@@ -915,6 +947,7 @@ iframe {
     color: var(--secondaryColor);
     z-index: 1;
     transform: rotate(-90deg);
+    transition: 600ms 0ms ease-in-out;
     white-space: nowrap;
 }
 
@@ -924,6 +957,7 @@ iframe {
     left: 0;
     top: 0;
     background: linear-gradient(90deg, var(--opaqueBackground) 0%, rgba(255, 0, 0, 0) 100%);
+    transition: 800ms 100ms ease-in-out;
     width: 100%;
     height: 100%;
     z-index: 1;
