@@ -714,7 +714,7 @@ iframe {
 }
 
 .content-section__text2 {
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     color: var(--secondaryColor);
@@ -723,6 +723,17 @@ iframe {
     margin-bottom: 15px;
     transform: translate3d(0, 0, 0);
     transition: var(--contentTransitionDuration) 500ms var(--contentTransitionBezier);
+    transition: 0.3s ease-in-out;
+}
+
+.content-section__text2:hover {
+    background-color: rgba(229, 229, 229, 0.213);
+    cursor: pointer;
+}
+
+.special-content-text {
+    background-color: initial !important;
+    cursor: initial !important;
 }
 
 .content-section__buttons-holder {
@@ -1003,6 +1014,38 @@ iframe {
     z-index: 1;
 }
 
+.point-title {
+    background: rgba(233, 233, 233, 0.062);
+    width: 100% !important;
+    border-radius: 11px;
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.point-title-opened {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: var(--primaryColor);
+}
+
+.point-list {
+    background: rgba(233, 233, 233, 0.04);
+    height: 125px;
+    opacity: 1;
+    padding: 15px 30px;
+    transition: 0.3s ease-in-out;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+.point-list-closed {
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    height: 0px;
+    transition: 0.3s ease-in-out;
+}
+
 
 /***** MEDIA QUERIES *****/
 
@@ -1050,6 +1093,14 @@ iframe {
 @media only screen and (max-width: 1000px) {
     .content {
         width: 90%;
+    }
+    li {
+        color: var(--secondaryColor);
+        font: 600 12px Roboto, sans-serif;
+        text-align: left;
+    }
+    .point {
+        width: 100%;
     }
     .fixed-content-paging {
         display: none;

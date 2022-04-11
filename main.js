@@ -93,6 +93,8 @@ function animate(time) {
     render(time)
 }
 
+
+
 function render(time) {
     time = time / 1000
 
@@ -361,6 +363,141 @@ function windowWheelOrTouch(e) {
     moveScene()
     ui.ui_moveScene('up')
 }
+
+function load() {
+    var pt1 = document.getElementById("pt1")
+    var pt2 = document.getElementById("pt2")
+    var pt3 = document.getElementById("pt3")
+    var pt4 = document.getElementById("pt4")
+    var pt5 = document.getElementById("pt5")
+
+    var plist1 = document.getElementById("plist1")
+    var plist2 = document.getElementById("plist2")
+    var plist3 = document.getElementById("plist3")
+    var plist4 = document.getElementById("plist4")
+    var plist5 = document.getElementById("plist5")
+
+    pt1.addEventListener("click", togglePt1, false);
+    pt2.addEventListener("click", togglePt2, false);
+    pt3.addEventListener("click", togglePt3, false);
+    pt4.addEventListener("click", togglePt4, false);
+    pt5.addEventListener("click", togglePt5, false);
+
+
+}
+
+function togglePt1() {
+    pt1.classList.toggle("point-title-opened")
+
+
+    if (pt1.classList.contains("point-title-opened")) {
+        plist1.classList.remove("point-list-closed")
+        pt2.classList.remove("point-title-opened")
+        pt3.classList.remove("point-title-opened")
+        pt4.classList.remove("point-title-opened")
+        pt5.classList.remove("point-title-opened")
+        plist2.classList.add("point-list-closed")
+        plist3.classList.add("point-list-closed")
+        plist4.classList.add("point-list-closed")
+        plist5.classList.add("point-list-closed")
+    } else {
+        plist1.classList.add("point-list-closed")
+    }
+}
+
+function togglePt2() {
+    pt2.classList.toggle("point-title-opened")
+
+    if (pt2.classList.contains("point-title-opened")) {
+        plist1.classList.add("point-list-closed")
+        pt1.classList.remove("point-title-opened")
+        pt3.classList.remove("point-title-opened")
+        pt4.classList.remove("point-title-opened")
+        pt5.classList.remove("point-title-opened")
+        plist2.classList.remove("point-list-closed")
+        plist3.classList.add("point-list-closed")
+        plist4.classList.add("point-list-closed")
+        plist5.classList.add("point-list-closed")
+    } else {
+        plist2
+            .classList.add("point-list-closed")
+
+    }
+}
+
+function togglePt3() {
+    pt3.classList.toggle("point-title-opened")
+
+    if (pt3.classList.contains("point-title-opened")) {
+        plist1.classList.add("point-list-closed")
+        plist2.classList.add("point-list-closed")
+        pt1.classList.remove("point-title-opened")
+        pt2.classList.remove("point-title-opened")
+        pt4.classList.remove("point-title-opened")
+        pt5.classList.remove("point-title-opened")
+        plist3.classList.remove("point-list-closed")
+        plist4.classList.add("point-list-closed")
+        plist5.classList.add("point-list-closed")
+    } else {
+        plist3
+            .classList.add("point-list-closed")
+
+    }
+
+}
+
+function togglePt4() {
+
+    pt4.classList.toggle("point-title-opened")
+
+    if (pt4.classList.contains("point-title-opened")) {
+        plist1.classList.add("point-list-closed")
+        plist2.classList.add("point-list-closed")
+        plist3.classList.add("point-list-closed")
+        plist5.classList.add("point-list-closed")
+        pt1.classList.remove("point-title-opened")
+        pt2.classList.remove("point-title-opened")
+        pt3.classList.remove("point-title-opened")
+        pt5.classList.remove("point-title-opened")
+        plist4.classList.remove("point-list-closed")
+        plist5.classList.add("point-list-closed")
+    } else {
+        plist4
+            .classList.add("point-list-closed")
+
+    }
+
+}
+
+
+
+
+
+function togglePt5() {
+    pt5.classList.toggle("point-title-opened")
+
+    if (pt5.classList.contains("point-title-opened")) {
+        plist1.classList.add("point-list-closed")
+        plist2.classList.add("point-list-closed")
+        plist3.classList.add("point-list-closed")
+        pt1.classList.remove("point-title-opened")
+        pt2.classList.remove("point-title-opened")
+        pt3.classList.remove("point-title-opened")
+        pt4.classList.remove("point-title-opened")
+        plist4.classList.add("point-list-closed")
+        plist5.classList.remove("point-list-closed")
+    } else {
+        plist5
+            .classList.add("point-list-closed")
+
+    }
+
+
+}
+
+
+
+document.addEventListener("DOMContentLoaded", load, false)
 
 function mouseMove(e) {
     ui.ui_moveEvent(e, configuration.Use2DTextOver3D)
