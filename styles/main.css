@@ -614,6 +614,7 @@ iframe {
 .content-section.section--hidden .content-section__text,
 .content-section.section--hidden .special-text,
 .content-section.section--hidden-reverse .content-section__text2,
+.content-section.section--hidden-reverse .content-section__text3,
 .content-section.section--hidden .content-section__button,
 .content-section.section--hidden .content-section__image-holder,
 .content-section.section--hidden .content-section__buttons-holder,
@@ -625,6 +626,7 @@ iframe {
 .content-section.section--hidden-reverse .content-section__title,
 .content-section.section--hidden-reverse .content-section__text,
 .content-section.section--hidden-reverse .special-text,
+.content-section.section--hidden-reverse .content-section__text2,
 .content-section.section--hidden-reverse .content-section__text2,
 .content-section.section--hidden-reverse .content-section__button,
 .content-section.section--hidden-reverse .content-section__image-holder,
@@ -714,6 +716,19 @@ iframe {
 }
 
 .content-section__text2 {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondaryColor);
+    text-align: center;
+    font: 600 20px Roboto, sans-serif;
+    margin-bottom: 15px;
+    transform: translate3d(0, 0, 0);
+    transition: var(--contentTransitionDuration) 500ms var(--contentTransitionBezier);
+    transition: 0.3s ease-in-out;
+}
+
+.content-section__text3 {
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -1030,7 +1045,7 @@ iframe {
 
 .point-list {
     background: rgba(233, 233, 233, 0.04);
-    height: 125px;
+    /* height: 125px; */
     opacity: 1;
     padding: 15px 30px;
     transition: 0.3s ease-in-out;
@@ -1126,20 +1141,27 @@ iframe {
         font-size: 30px;
     }
     .content-section__text {
-        font-size: 16px;
+        font-size: 14px;
         width: 100%;
     }
     .special-text {
-        font-size: 16px;
+        font-size: 14px;
         width: 100%;
     }
     .content-section__text2 {
         font-size: 12px;
         width: 100%;
     }
+    .content-section__text3 {
+        font-size: 12px;
+        width: 100%;
+    }
     .content-services {
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .content-services-special {
+        width: 100%;
     }
     .content-services__service {
         padding: 10px;
