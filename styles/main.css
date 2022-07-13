@@ -956,13 +956,11 @@ iframe {
 }
 
 .content-portfolio__image-holder:hover {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+    /* transform: translate3d(0, 0, 0) rotate(0deg); */
     cursor: pointer;
-    width: 350px;
-    height: 350px;
+    /* width: 350px;
+    height: 350px; */
 }
-
-.content-portfolio__image-holder:hover {}
 
 .content-portfolio__image-holder:hover:before {
     transition: 600ms 0ms ease-in-out;
@@ -981,12 +979,12 @@ iframe {
 }
 
 .content-portfolio__image-holder:hover .content-portfolio__image {
-    transform: rotate(0deg);
+    /* transform: rotate(0deg); */
 }
 
 .content-portfolio__image-holder:hover .content-portfolio__name {
-    transform: rotate(0deg);
-    left: 0px;
+    /* transform: rotate(0deg); */
+    left: 17px;
 }
 
 .content-portfolio__image-holder:nth-of-type(1),
